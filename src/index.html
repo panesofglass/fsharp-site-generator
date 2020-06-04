@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sample Site</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <form action="#">
+            <label aria-required="true">
+                <span>Email Address</span>
+                <input type="text" name="email-address" placeholder="name@domain.com" required autofocus/>
+            </label>
+            <label>
+                <span>First Name</span>
+                <input type="text" name="first-name" placeholder="---"/>
+            </label>
+            <label>
+                <span>Last Name</span>
+                <input type="text" name="last-name" placeholder="---"/>
+            </label>
+            <label id="attending" aria-required="true">
+                <span>Number of People Attending</span>
+                <span>All Ages</span>
+                <input type="number" name="attending" placeholder="---" required/>
+            </label>
+            <label aria-required="true">
+                <span>Select Upcoming Service to Attend</span>
+                <select name="upcoming-service" required>
+                    <option value="">Choose Date</option>
+                </select>
+            </label>
+            <section class="actions">
+                <span>* Required</span>
+                <button type="submit">Send</button>
+            </section>
+        </form>
+    </body>
+</html>

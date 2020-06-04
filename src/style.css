@@ -1,0 +1,154 @@
+/**
+ * Minimal CSS Reset
+ * https://alligator.io/css/minimal-css-reset/
+ */
+ html {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ * Site styles
+ */
+
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+label {
+    display: block;
+}
+
+input, select, option {
+    font: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+    background-color: #F2F2F2;
+}
+
+form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-top: 9rem;
+}
+
+form {
+    background-color: #FFFFFF;
+    padding-left: 2rem;
+}
+    form > label, form > .actions {
+        width: 28rem;
+    }
+
+    form > label {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        margin-bottom: 1rem;
+    }
+
+        form > label:last-of-type {
+            flex-direction: column;
+            margin-top: 0.6rem;
+        }
+
+        form > label > span {
+            flex: 1;
+        }
+
+        form > label[aria-required=true] > span::after {
+            content: "*";
+        }
+
+        form > label > input {
+            width: 20rem;
+            padding: 0.3rem;
+            border-radius: 2px;
+        }
+
+        form > label > select {
+            margin-top: 0.6rem;
+            padding: 0.3rem;
+            border-radius: 2px;
+        }
+
+        form > label#attending {
+            position: relative;
+        }
+
+            form > label#attending > span + span {
+                position: absolute;
+                top: 1.2rem;
+                font-style: oblique;
+                font-size: 0.95rem;
+            }
+
+                form > label#attending > span + span::after {
+                    content: unset;
+                }
+
+            form > label#attending > input[name=attending] {
+                width: 14rem;
+            }
+
+    .actions {
+        display: flex;
+        align-items: center;
+    }
+
+        .actions > span {
+            font-size: .8rem;
+            font-style: oblique;
+        }
+
+        .actions > button {
+            margin-left: auto;
+            padding: 0.4rem;
+            width: 7rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+@media (max-width: 959.98px) {
+    body {
+        flex-direction: column;
+        align-content: center;
+        min-width: 30rem;
+    }
+
+    form {
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    form {
+        padding-top: 2rem;
+    }
+}
